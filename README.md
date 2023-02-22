@@ -1,3 +1,3 @@
 # Personal-Site
 
-Personal site made with Tailwind
+My Personal Site. Built with Tailwind
