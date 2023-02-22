@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Contact Me</title>
-    <meta name="description" content="Contact Jayesh">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <style>
-        input, textarea {
-            color: black;
+    <head>
+        <meta charset="UTF-8" />
+        <title>Contact Me</title>
+        <meta name="description" content="Contact Jayesh" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <style>
+            input,
+            textarea {
+                color: black;
+            }
+        </style>
+    </head>
+    <body class="bg-blue-500 text-white flex flex-col items-center h-screen">
+        <div class="p-10">
+            <h1 class="text-3xl font-medium mt-10">Contact Me</h1>
+            <form class="mt-6">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Name</label>
+                    <input id="name" type="text" class="w-full border border-gray-400 p-2" />
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input id="email" type="email" class="w-full border border-gray-400 p-2" />
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Message</label>
+                    <textarea id="message" class="w-full border border-gray-400 p-2"></textarea>
+                </div>
+                <a href="#" onclick="submitForm();">
+                    <button class="bg-red-500 hover:bg-green-300 text-white p-2 rounded-full">Submit</button>
+                </a>
+            </form>
+        </div>
+        <div class="flex mt-6">
+            <a href="index.html" class="bg-red-500 hover:bg-green-300 text-white p-2 rounded-full">Back to Homepage</a>
+        </div>
+    </body>
+    <script>
+        function submitForm() {
+            let name = document.querySelector("#name").value;
+            let email = document.querySelector("#email").value;
+            let message = document.querySelector("#message").value;
+
+            let emailLink = `mailto:jayeshpaluru@gmail.com?subject=Message from Contact Form&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+            window.location.href = emailLink;
         }
-    </style>
-  </head>
-  <body class="bg-gray-900 text-white flex flex-col items-center h-screen">
-    <div class="p-10">
-      <h1 class="text-3xl font-medium mt-10">Contact Me</h1>
-      <form class="mt-6">
-        <div class="mb-4">
-          <label class="block text-sm font-medium mb-2">Name</label>
-          <input id="name" type="text" class="w-full border border-gray-400 p-2">
-        </div>
-        <div class="mb-4">
-          <label class="block text-sm font-medium mb-2">Email</label>
-          <input id="email" type="email" class="w-full border border-gray-400 p-2">
-        </div>
-        <div class="mb-4">
-          <label class="block text-sm font-medium mb-2">Message</label>
-          <textarea id="message" class="w-full border border-gray-400 p-2"></textarea>
-        </div>
-        <a href="#" onclick="submitForm();">
-          <button class="bg-red-500 hover:bg-red-600 text-white p-2">Submit</button>
-        </a>
-      </form>
-    </div>
-    <div class="flex mt-6">
-        <a href="index.html" class="bg-red-500 hover:bg-blue-600 text-white p-2 rounded-full">Back to Homepage</a>
-      </div>
-  </body>
-  <script>
-    function submitForm() {
-      let name = document.querySelector("#name").value;
-      let email = document.querySelector("#email").value;
-      let message = document.querySelector("#message").value;
-
-      let emailLink = `mailto:jayeshpaluru@gmail.com?subject=Message from Contact Form&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-
-      window.location.href = emailLink;
-    }
-  </script>
+    </script>
 </html>
