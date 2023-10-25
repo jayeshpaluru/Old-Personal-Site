@@ -1,3 +1,3 @@
 # Personal-Site
 
-## My Personal Site. Built with HTML, JavaScript, CSS, and SCSS.
+## My Old Personal Site. Built with HTML, JavaScript, CSS, and SCSS.
